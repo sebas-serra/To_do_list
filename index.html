@@ -3,27 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./main.js" defer></script>
 </head>
 <body>
-     <header>
+    <header>
         <h1>To Do List</h1>
-     </header>
-     <main>
+    </header>
+    <main>
         <div class="card">
             <h2>Actividades</h2>
             <ul id="actividades">
-                <li class="act" id="1" data-estado="No_hecha">Tarea de IPO</li>
-                <li class="act" id="2" data-estado="No_hecha">Tarea de Sistemas</li>
+                <li class="act" id="1" data-estado="No_hecha">
+                    <span class="tarea-texto">Tarea de IPO</span>
+                    <span class="tarea-fecha">sin fecha límite</span>
+                </li>
+                <li class="act" id="2" data-estado="No_hecha">
+                    <span class="tarea-texto">Tarea de Sistemas</span>
+                    <span class="tarea-fecha">sin fecha límite</span>
+                </li>
             </ul>
         </div>
 
-        <button id="add">Añadir</button>
-        <button id="delete">Eliminar</button>
-        <button id="edit">Editar</button>
-     </main>
-    
+        <div class="botones">
+            <button id="add">+ Añadir</button>
+            <button id="delete">Eliminar</button>
+            <button id="edit">Editar</button>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal">
+            <h3 id="modal-title">Nueva tarea</h3>
+            <label for="modal-desc">Descripción</label>
+            <input type="text" id="modal-desc" placeholder="Ej: Entregar informe...">
+            <label>Fecha límite</label>
+            <div id="cal-header">
+                <button id="cal-prev">&#8249;</button>
+                <span id="cal-month-year"></span>
+                <button id="cal-next">&#8250;</button>
+            </div>
+            <div id="calendario"></div>
+            <div id="fecha-seleccionada">Sin fecha límite seleccionada</div>
+            <div class="modal-btns">
+                <button id="modal-cancel">Cancelar</button>
+                <button id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
