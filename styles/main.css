@@ -60,7 +60,6 @@ h1 {
   line-height: 1;
 }
 
-/* ── Main ── */
 main {
   width: 100%;
   max-width: 560px;
@@ -69,7 +68,6 @@ main {
   gap: 1.5rem;
 }
 
-/* ── Card ── */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -79,14 +77,7 @@ main {
   overflow: hidden;
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  opacity: 0.6;
-}
+
 
 h2 {
   font-family: 'Syne', sans-serif;
@@ -98,7 +89,6 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
-/* ── List ── */
 #actividades {
   list-style: none;
   display: flex;
@@ -121,7 +111,6 @@ h2 {
   transform: translateX(3px);
 }
 
-/* ── Estado: hecha ── */
 #actividades li[data-estado="hecha"] {
   background: var(--done-bg);
   border-left-color: var(--done-border);
@@ -142,7 +131,6 @@ h2 {
   opacity: 0.7;
 }
 
-/* ── Estado: No_hecha ── */
 #actividades li[data-estado="No_hecha"] {
   background: var(--undone-bg);
   border-left-color: var(--undone-border);
@@ -161,7 +149,6 @@ h2 {
   opacity: 0.7;
 }
 
-/* ── Buttons ── */
 button {
   font-family: 'Space Mono', monospace;
   font-size: 0.75rem;
@@ -209,7 +196,6 @@ button:active {
   border-color: var(--undone-text);
 }
 
-/* Wrap buttons in a row */
 main > button {
   display: inline-block;
 }
